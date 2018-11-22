@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>注册账号</title>
+</head>
+<body>
+<table width="%90" align="center" border="1" cellspacing="0" cellpadding="0">
+ 		<form action="registerServlet" method = "post" accept-charset = "UTF-8">
+ 			<tr>
+ 				<td colspan =2 align="center">用户注册</td>
+ 			</tr>
+ 			<tr>
+ 				<td>昵称</td>
+ 				<td><input type="text" name = "nickname" size=35></td>
+ 			</tr>
+ 			<tr>
+ 				<td>账号</td>
+ 				<td><input type="text" name = "account" size=35></td>
+ 			</tr>
+ 			<tr>
+ 				<td>密码</td>
+ 				<td><input type="password" name ="newpassword1" size = 35></td>
+ 			</tr>
+ 			<tr>
+ 				<td>重新输入密码</td>
+ 				<td><input type="password" name="newpassword2" size=35></td>
+ 			</tr>
+			<tr>
+				<td colspan=2>
+					<table align="center" width="100%" cellspacing=0 cellpadding=0>
+						<tr>
+							<td align="center">
+							<input type="submit" value="注册" >
+							</td>
+							<td align="center"><input type="reset"  value="重新输入"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+ 		</form>
+ 	</table>
+</body>
+</html>

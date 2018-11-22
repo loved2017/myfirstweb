@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登陆页面</title>
+</head>
+<body>
+<!-- 首页的页面  -->
+<!-- 由于这里需要两个响应，所以需要两个表单响应，这里使用了嵌套的结构 -->
+ 	<table width="%90" align="center" border="1" cellspacing="0" cellpadding="0">
+ 		<form action="loadServlet" method = "post" accept-charset = "UTF-8">
+ 			<tr>
+ 				<td colspan =2 align="center">登陆系统</td>
+ 			</tr>
+ 			<tr>
+ 				<td>账号：</td>
+ 				<td><input type="text" name = "account" size=34></td>
+ 			</tr>
+ 			<tr>
+ 				<td>密码：</td>
+ 				<td><input type="password" name ="password" size = 34></td>
+ 			</tr>
+			<tr>
+				<td colspan=2>
+					<table align="center" width="100%" cellspacing=0 cellpadding=0>
+						<tr>
+							<td align="center"><input type="submit" value="登陆"></td>
+							<td align="center">
+								
+							<input type="submit" onclick="javascript:this.form.action='registered.html';" value="注册">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+ 		</form>
+ 	</table>
+</body>
+</html>
