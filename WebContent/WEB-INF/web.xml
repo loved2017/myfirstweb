@@ -3,11 +3,11 @@
   <display-name>myfirstwebDemo</display-name>
   <welcome-file-list>
     <welcome-file>homePage.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>loadFail.jsp</welcome-file>
+    <welcome-file>loadsuccess.jsp</welcome-file>
+    <welcome-file>registered.html</welcome-file>
+    <welcome-file>registerFail.jsp</welcome-file>
+    <welcome-file>registerSuccess.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
