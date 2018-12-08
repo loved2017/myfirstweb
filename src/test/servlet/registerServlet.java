@@ -120,7 +120,7 @@ public class registerServlet extends HttpServlet {
 		sf.close();
 
 		session.setAttribute("nickname", nickname);
-		response.sendRedirect("https://www.baidu.com/");
+		response.sendRedirect("registerSuccess.jsp");
 		return;
 	}
 
