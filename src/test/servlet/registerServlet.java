@@ -17,7 +17,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionContext;
-import javax.websocket.Session;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import test.model.user;
 
 
 /**
@@ -93,18 +99,28 @@ public class registerServlet extends HttpServlet {
 		}
 		
 		//当所有的验证都通过的时候，这时就可以将所创建的用户数据存储进入数据库了
-		try {
-			pStmt = conn.prepareStatement(sql);
-			pStmt.setString(1, nickname);
-			pStmt.setString(2, account);
-			pStmt.setString(3, newpassword1);
-			pStmt.execute();
-		} catch (SQLException e) {
+//		try {
+//			pStmt = conn.prepareStatement(sql);
+//			pStmt.setString(1,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               );
+//			pStmt.setString(2, account);
+//			pStmt.setString(3, newpassword1);
+//			pStmt.execute();
+//			
+//		} catch (SQLException e) {
+//
+//			e.printStackTrace();
+//		}
+		Configuration config = new Configuration().configure();
+		SessionFactory sf = config.buildSessionFactory();
+		Session s =  sf.openSession();
+		Transaction tx = s.beginTransaction();
+		s.save(new user(nickname, account, newpassword1));
+		tx.commit();
+		s.close();
+		sf.close();
 
-			e.printStackTrace();
-		}
 		session.setAttribute("nickname", nickname);
-		response.sendRedirect("registerSuccess.jsp");
+		response.sendRedirect("https://www.baidu.com/");
 		return;
 	}
 

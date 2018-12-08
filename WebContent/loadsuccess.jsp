@@ -8,6 +8,6 @@
 </head>
 <body>
 <!-- 登陆成功界面 -->
-	<h3><font color = "red">你好，<%=session.getAttribute("nickname") %>！欢迎登陆虎虎虎系统</font></h3>
+	<h3><font color = "red">你好，<%=session.getAttribute("nickname") %>！欢迎登录虎虎虎系统</font></h3>
 </body>
 </html>
